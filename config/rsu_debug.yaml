@@ -1,0 +1,28 @@
+debug_solver_node:
+  ros__parameters:
+    # ===== joints =====
+    joint_ankle_pitch: "ankle_pitch"
+    joint_ankle_roll: "ankle_roll"
+    joint_upper_crank: "upper_crank"
+    joint_lower_crank: "lower_crank"
+
+    hold_alpha_on_infeasible: true
+
+    # ===== TF-based crank sanity check params =====
+    world_frame: "base_link"
+    tf_timeout_sec: 0.05
+    tf_check_rate_hz: 30.0
+    gate_publish_by_tf_check: true
+
+    # frames
+    c1_frame: "point_c1_1"
+    c2_frame: "point_c2_1"
+    u1_frame: "point_u1_1"
+    u2_frame: "point_u2_1"
+
+    # tolerances / limits
+    len_tol_m: 0.002
+    ang_min_deg: 65.0
+    ang_max_deg: 115.0
+
+    tf_log_rate_hz: 1.0
